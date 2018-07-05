@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ermita de Santa Marta</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		
+				<!-- OPENLAYERS -->
+
+		<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+		<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+		<script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+
+			<!-- LEAFLET -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="crossorigin=""></script>
+		
+		
+	</head>
+	<body>
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Inicio</a></li>
+							<li><a href="#one">Galeria</a></li>
+							<li><a href="#two">Mural</a></li>
+							<li><a href="#three">Capilla</a></li>
+							<li><a href="#four">Vivienda</a></li>
+							<li><a href="#five">Ubicación</a></li>
+							<li><a href="#six">Información</a></li>
+							<li><a href="#seven">Equipo</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>ApS: Documentación y modelado 3D de la ermita de Santa Marta</h1>
+							<img src="images/retall.jpg" style="width: 90%;display: block;margin-right: auto;">
+
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Galeria</a></li>
+								<li><a href="#two" class="button scrolly">Mural</a></li>
+								<li><a href="#three" class="button scrolly">Capilla</a></li>
+								<li><a href="#four" class="button scrolly">Vivienda</a></li>
+								<li><a href="#five" class="button scrolly">Ubicación</a></li>
+								<li><a href="#six" class="button scrolly">Información</a></li>
+							</ul>							
+						</div>
+					</section>
+					
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<div align="center"><iframe src="images/gallery.html" width=1037px height=631px frameborder=1 scrolling=auto></iframe></div>
+						</section>
+					</section>
+				<!-- Two -->
+					<section id="two" class="wrapper style2 spotlights">
+						<section>
+							<div class="sketchfab-embed-wrapper"><iframe width="1037" height="631" src="https://sketchfab.com/models/144bc6f0615d475db8c51d00c0172e25/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"></p></div>
+						</section>						
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style2 spotlights">
+						<section>
+							<div class="sketchfab-embed-wrapper"><iframe width="1037" height="631" src="https://sketchfab.com/models/be646b8ec9314f52bdbf6adc235ed092/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe><p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"></p></div>
+						</section>
+					</section>
+					
+				<!-- Four -->
+					<section id="four" class="wrapper style2 spotlights">
+						<section>
+							<div class="sketchfab-embed-wrapper"><iframe width="1037" height="631" src="https://sketchfab.com/models/efbd06b28e054f1e91a77a06edf83376/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe><p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"></p></div>
+						</section>
+					</section>
+
+				<!-- Five -->
+					<section id="five" class="wrapper style2 spotlights">
+						<section>
+							<div id="mapid" style="width:100%; height:631px; position: relative;" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0">
+
+							<script>
+
+							var mymap = L.map('mapid').setView([39.12936, -0.35732], 13);
+							var marker = L.marker([39.12936, -0.35732]).addTo(mymap);
+							L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+								maxZoom: 18,
+								attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+									'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+									'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+								id: 'mapbox.streets'
+							}).addTo(mymap);
+
+							</script>
+						</section>
+					</section>
+
+					
+				<!-- Six -->
+					<section id="six" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Información</h2>
+							<a href="#popup" class="popup-link">¿Desea obtener los modelos en calidad alta?</a>
+							<div class="modal-wrapper" id="popup">
+							   <div class="popup-contenedor">
+								  <p>Si desea obtener los modelos en calidad alta, por favor, contacte con nosotros a través del correo <a href="mailto:apsermitastmarta@gmail.com">apsermitastmarta@gmail.com</a> para más información.</p>
+								  <a class="popup-cerrar" href="#six">X</a>
+							   </div>
+							</div>
+							<div class="features">
+								<section style="width: 100%;">
+									<span class="icon major fa-search"></span>
+									<h3>Historia</h3>
+									<p>
+									El complejo arquitectónico de la ermita de Santa Marta forma parte de las construcciones que existían en el valle de La Murta con anterioridad a la construcción del monasterio. La construcción de la ermita se llevó a cabo gracias a las donaciones de Doña Beatriz Catalá y de Villaragut en 1438. El complejo arquitectónico de la ermita se completaba con un huerto y una granja situados en los alrededores. La ermita fue ocupada y abandonada en numerosas ocasiones. Una de las de las restauraciones fue promovida por fray Francisco Boronat en 1741.<br>
+									Sin duda uno de los valores a destacar de la ermita era su enclave, ubicándose ésta en la ladera de un monte, totalmente rodeada de vegetación.<br>
+									Los muros de la ermita aparecían decorados con formas geométricas, dibujadas combinando tonos amarillos, rojos, negros, etc.
+									La expresión artística de mayor valor en la Ermita de santa Marta se encuentra en el muro adosado a la iglesia. En esta ubicación encontramos un mural de San Jerónimo, completando la escena un ángel que porta un crucifijo y situándose a los pies del Santo su símbolo, el león.<br>
+									La ermita de Santa Marta ha sido objeto de numerosas acciones de recuperación y restauración, financiadas en conjunto por la Conselleria de Cultura y el Excmo. Ayuntamiento de Alzira. Una de las últimas acciones, llevada a cabo en torno a 2007, tuvo como objetivo la consolidación de fragmentos aislados de pinturas que se encuentran a lo largo del muro que rodea el complejo.  
+									</p>
+								</section>
+							</div>
+						</div>
+					</section>
+
+				<!-- Seven -->
+					<section id="seven" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Sobre nosotros</h2>
+							<p>Somos Cristian Bauset, Josep Mas y Daniel Santillana, alumnos del Máster Universitario en Ingeniería Geomática y Geoinformación de la UPV.<br>
+							Este proyecto ha estado desarrollado siguiendo la metodología Aprendizaje Servicio (ApS) para la asignatura de 
+							Técnicas de documentación patrimonial arquitectónica, impartida por el profesor José Luis Lerma.<br>
+							El objetivo es la puesta en valor de la Ermita de Santa Marta utilizando para ello el modelado 3D a partir de técnicas fotogramétricas. De este modo, se materializa la realidad del terreno en un entorno virtual, para poder ejercer sobre él los trabajos de restauración o conservación que se estimen oportunos por parte del consistorio de Alzira.
+								</p>
+							<div class="split style1">
+								<section>
+									<form method="post" action="contactform.php">
+										<div class="field half first">
+											<label for="name">Nombre</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Correo</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Mensaje</label>
+											<textarea name="message" id="message" rows="5"></textarea>
+										</div>
+										<ul>											
+											<button type="submit" name="enviiia" class="button submit">Enviar</button>
+										</ul>
+									</form>
+								</section>
+								
+								<section>
+									<ul class="contact">
+										<li>											
+											<h3>Email</h3>
+											<img src="images/Foto1.jpg" alt="Avatar" class="avatar">
+											<p>Cristian Bauset<br><a href="mailto:cribaumu@topo.upv.es">cribaumu@topo.upv.es</a><br></p>
+											<img src="images/Foto2.jpeg" alt="Avatar" class="avatar">
+											<p>Josep Mas<br><a href="mailto:jomabo3@topo.upv.es">jomabo3@topo.upv.es</a><br></p>
+											<img src="images/Foto3.jpeg" alt="Avatar" class="avatar">
+											<p>Daniel Santillana<br><a href="mailto:dasanfe3@epsg.upv.es">dasanfe3@epsg.upv.es</a><br></p>
+										</li>
+										<li>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; BAMASSA</li><li>Diseño: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
